@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>IBM Cloud - Lab 2</title>
+  </head>
+  <body>
+    <div div="maindiv" class="maindiv">
+      <h1>Simple Interest Calculator</h1>
+      <table>
+        <tbody>
+          <tr>
+            <td>Amount</td>
+            <td><input type="number" id="principal" /></td>
+          </tr>
+          <tr>
+            <td>Interest Rate</td>
+            <td>
+              <input
+                id="rate"
+                max="20"
+                min="1"
+                step="0.25"
+                type="range"
+                value="10.25"
+                oninput="updateRate()"
+              />
+              <!-- reflects the selected value in range -->
+              <span id="rate_val">10.25%</span> <br />
+            </td>
+          </tr>
+          <tr>
+            <td>No. of Years</td>
+            <td>
+              <select id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <button class="button" onclick="compute()">Compute Interest</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <span id="result"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <footer>&#169; Everyone Can Get Rich</footer>
+    </div>
+  </body>
+</html>
